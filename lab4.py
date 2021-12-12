@@ -107,23 +107,31 @@ class Human(Australopithecus, HomoHabilis, HomoErectus, Neanderthalensis, HomoSa
         return True
 
 
-human_first = Australopithecus
-human_second = HomoHabilis
-human_third = HomoErectus
-human_fourth = Neanderthalensis
-human_fifth = HomoSapiens
-human_main = Human
+human_first = Australopithecus()
+human_second = HomoHabilis()
+human_third = HomoErectus()
+human_fourth = Neanderthalensis()
+human_fifth = HomoSapiens()
+human_main = Human()
 humans = [human_first, human_second, human_third, human_fourth, human_fifth]
 
-print(human_first.hunt(human_first, human_third))
+print(human_first.hunt(human_third))
 
 print(human_second.life_style())
 
 print(human_third.loot())
 
-print(human_main.life_style())
+print(human_main.speech())
 
+human_weight = ''
+max_weight = 0
 for human in humans:
-    print(human.level)
+    print(human.level, human.loot())
+    if human.weight > max_weight:
+        max_weight = human.weight
+        human_weight = human
+print(human_weight, max_weight)
+
+
 
 
