@@ -123,6 +123,8 @@ print(human_third.loot())
 
 print(human_main.speech())
 
+print(human_fifth.life_style())
+
 human_weight = ''
 max_weight = 0
 for human in humans:
